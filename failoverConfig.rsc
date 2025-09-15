@@ -1,7 +1,8 @@
 # This is the failover configuration for Mikrotik v6.49.10 template developed for YANNA APARTMENT by Khaliques
 
 # Modify to include the source subnets you're working with 
-:local list_WAN1_Starlink {'10.0.0.0/27';
+
+:local list_WAN1_ {'10.0.0.0/27';
 '10.0.0.64/27';
 '10.0.0.128/27';
 '10.0.0.192/27';
@@ -15,7 +16,7 @@
 '10.0.2.192/27'
 };
 
-:local list_WAN2_WoW {'10.0.0.32/27';
+:local list_WAN2_ {'10.0.0.32/27';
 '10.0.0.95/27';
 '10.0.0.160/27';
 '10.0.0.224/27';
@@ -30,11 +31,11 @@
 };
 
 # Base containment for subnet lists
-:local collection {$list_WAN1_Starlink; $list_WAN2_WoW};
+:local collection {$list_WAN1_; $list_WAN2_};
 
 # Configure IP address prefix group 
 :foreach iprefix in=collection do={
-    :if ($iprefix = $list_WAN1_Starlink) do={
+    :if ($iprefix = $list_WAN1_) do={
         :foreach ipAdd in=$iprefix do={ 
             /ip firewall address-list add list=WAN1 address=$ipAdd
          }

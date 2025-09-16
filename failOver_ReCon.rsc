@@ -1,6 +1,6 @@
 # Follow up on failoverConfig.rsc script
 
-# Extract and reassign some IPs from Address-list WAN1 and WAN2 to WAN3 all ISPs tasked with balancing the load between traffics from eaach address list
+# Extract and reassign some IPs from Address-list WAN1 and WAN2 to WAN3
 :global listWAN1;
 :global listWAN2;
 

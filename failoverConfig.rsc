@@ -1,4 +1,4 @@
-# This is the failover configuration for Mikrotik v6.49.10 template developed for YANNA APARTMENT by Khaliques
+# This is the failover configuration for Mikrotik v6.49 stable initial template
 
 # Modify to include the source subnets you're working with 
 :global listWAN1 {10.0.0.0/27;
